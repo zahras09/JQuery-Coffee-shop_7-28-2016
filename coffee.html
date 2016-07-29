@@ -69,15 +69,27 @@
     var myRevenueMessage = $('#revenue');
 
     myImage.attr("src", "static/coffee_beans.jpg");
-    myImage.mouseover(makeCoffee);
+    myImage.mouseover(function(){
+        return makeCoffee('brew')
+    }
+    );
 
-    function makeCoffee(){
+    function makeCoffee(drinkType){
         myImage.attr("src", "static/coffee_machine.jpg");
         setTimeout(function() { myImage.attr("src", 
             "static/coffee_mug.jpg"); }, 500);
         setTimeout(function() { myImage.attr("src", 
             "static/coffee_beans.jpg"); }, 1500);
-    }
+        
+
+        var drinksOrdered = [];
+        drinksOrdered.push(drinkType)
+        console.log(drinksOrdered)
+
+    };
+
+
+
 
  </script>
 
