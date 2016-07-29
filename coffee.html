@@ -68,7 +68,15 @@
     var myImage = $('#coffee_image');
     var myRevenueMessage = $('#revenue');
 
+    
     myImage.attr("src", "static/coffee_beans.jpg");
+    // Can also do:
+        // function myWrapperFunction(){
+            // makeCoffee("brew");
+           // }
+           // myImage.mouseover(myWrapperFunction);
+            
+        }
     myImage.mouseover(function(){
         return makeCoffee('brew')
     }
@@ -83,8 +91,12 @@
         
 
         var drinksOrdered = [];
+        //Declare an empty array
         drinksOrdered.push(drinkType)
+        //The push method is working on the variable drinksOrdered, which is
+        //an array, pushing a new drinkType to the array
         console.log(drinksOrdered)
+        //This statement prints to the console the entire array
 
     };
 
